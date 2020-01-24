@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fudongchen.github.io</id>
     <title>Felix</title>
-    <updated>2020-01-24T04:19:30.890Z</updated>
+    <updated>2020-01-24T04:43:09.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fudongchen.github.io"/>
     <link rel="self" href="https://fudongchen.github.io/atom.xml"/>
@@ -16,8 +16,7 @@
         <link href="https://fudongchen.github.io/post/markdown-yu-fa-de-xue-xi-jiao-cheng">
         </link>
         <updated>2020-01-24T04:15:16.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="markdown语法的学习教程">Markdown语法的学习教程</h1>
-<h2 id="初识markdown">初识markdown</h2>
+        <content type="html"><![CDATA[<h2 id="初识markdown">初识markdown</h2>
 <p><strong>Markdown</strong>是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p><strong>Markdown</strong>的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。包括我，写博客也是用<strong>Markdown</strong>，世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好支持<strong>Markdown</strong>。完全采用<strong>Markdown</strong>器的博客平台有<strong>Ghost</strong>和<strong>Typecho</strong>。</p>
 <h2 id="markdown编辑器的选择">Markdown编辑器的选择</h2>
@@ -214,9 +213,9 @@
 <h2 id="-6"></h2>
 <h3 id="图片">图片</h3>
 <p>在<strong>Markdown</strong>里面，图片插入繁琐是他唯一的 <strong>缺点</strong></p>
-<p>使用<strong>Markdown</strong>将图像插入文章，你需要在<strong>Markdown</strong>编辑器输入 <img src="" alt="" loading="lazy"> 。</p>
-<p>这时在预览面板中会自动创建一个图像上传框。你可以从电脑桌面拖放图片到上传框, 或者点击图片上传框使用标准的图像上传方式。</p>
-<p>如果你想通过链接插入网络上已经存在的图片，只要单击图片上传框的左下角的“链接”图标，这时就会呈现图像URL的输入框。想给图片添加一个标题, 你需要做的是将标题文本插图中的方括号，<img src="" alt="这里填写的是，如果图片打不开会出现的文字" loading="lazy">.</p>
+<p>使用<strong>Markdown</strong>将图像插入文章，你需要在<strong>Markdown</strong>编辑器输入 <img src="" alt="" loading="lazy"><br>
+这时在预览面板中会自动创建一个图像上传框。你可以从电脑桌面拖放图片到上传框, 或者点击图片上传框使用标准的图像上传方式。<br>
+如果你想通过链接插入网络上已经存在的图片，只要单击图片上传框的左下角的“链接”图标，这时就会呈现图像URL的输入框。想给图片添加一个标题, 你需要做的是将标题文本插图中的方括号，![这里填写的是，如果图片打不开会出现的文字] ()</p>
 <ul>
 <li>有一个弊端！如果你是写博客的话，插入的图片必须是网址图片链接</li>
 <li>如果大家对图片插入还有不理解的话，文章末尾我会给大家一些视频链接大家可以去看看</li>
