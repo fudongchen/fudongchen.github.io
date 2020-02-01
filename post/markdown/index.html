@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Markdown语法的学习教程 | Felix</title>
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="滑稽般的开心">
+<link rel="shortcut icon" href="https://fudongchen.github.io/favicon.ico?v=1580570886173">
+<link rel="stylesheet" href="https://fudongchen.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/muse.css">
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    <meta name="description" content="Markdown语法的学习教程" />
+    <meta name="keywords" content="信息时代" />
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" muse">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper  " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Felix</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">我思故我在</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            <li class="nav-item ">
+              
+                <a href="/">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/archives">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/tags">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/post/about">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout muse bg-color">
+        <div class="section-layout-wrapper">
+          
+
+<div class="sidebar">
+    <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body muse" id="sidebar_body">
+        
+          <div class="post-side-meta" id="post_side_meta">
+            
+<div class="sidebar-wrapper box-shadow-wrapper ">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://fudongchen.github.io/images/avatar.png"/>
+    <p class="site-author-name">Felix</p>
+    <p class="site-description right-motion">这个人很懒，什么都不想写...</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+  
+
+  <div class="sidebar-item right-motion sidebar-item-friends">
+    <p class="friends-title"><i class="fa fa-globe"></i> 友情链接</p>
+    <div class="friends-box">
+      
+        <p>
+          <a href="tingtalk.me">【庭说】</a>
+        </p>
+      
+    </div>
+  </div>
+
+</div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%88%9D%E8%AF%86markdown">初识markdown</a></li>
+<li><a href="#markdown%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9">Markdown编辑器的选择</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AF%AD%E6%B3%95">常用的语法</a>
+<ul>
+<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+<li><a href="#%E5%AD%97%E4%BD%93">字体</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8">引用</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
+<ul>
+<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
+<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%86%E6%AE%B5%E7%BA%BF">分段线</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
+        
+      </div>
+    </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+    let hasFix = false;
+    let scrollEl = document.querySelector('.main-continer');
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+    window.addEventListener('scroll', function(e) {
+    if (document.scrollingElement.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://fudongchen.github.io/post/markdown">
+      Markdown语法的学习教程
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-01-24</span>
+    </span>
+    
+      <span class="meta-item">
+        <span class="post-meta-divider pc-show">|</span>
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://fudongchen.github.io/tag/03TMGoe48">
+              <span>信息时代</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1657<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+              <div class="post-body next-md-body" id="post_body">
+                <blockquote>
+<p>Markdown语法的学习教程</p>
+</blockquote>
+<h2 id="初识markdown">初识markdown</h2>
+<p><strong>Markdown</strong>是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p><strong>Markdown</strong>的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。包括我，写博客也是用<strong>Markdown</strong>，世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好支持<strong>Markdown</strong>。完全采用<strong>Markdown</strong>器的博客平台有<strong>Ghost</strong>和<strong>Typecho</strong>。</p>
+<h2 id="markdown编辑器的选择">Markdown编辑器的选择</h2>
+<p><strong>Markdown</strong>的编辑器至关重要，它决定了您使用<strong>Markdown</strong>写作时的效率，不同操作系统系统，编辑器的选择也不同。</p>
+<p>以下是比较常见的Markdown编辑器</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">windows</th>
+<th style="text-align:center">O S X</th>
+<th style="text-align:center">Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>VSCode</strong></td>
+<td style="text-align:center"><strong>VSCode</strong></td>
+<td style="text-align:center"><strong>VSCode</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">HBuilderX</td>
+<td style="text-align:center">MacDown</td>
+<td style="text-align:center">UberWriter</td>
+</tr>
+<tr>
+<td style="text-align:center">Atom</td>
+<td style="text-align:center">RStudio</td>
+<td style="text-align:center">Atom</td>
+</tr>
+<tr>
+<td style="text-align:center">CuteMarkEd</td>
+<td style="text-align:center">HBuilderX</td>
+<td style="text-align:center">RStudio</td>
+</tr>
+<tr>
+<td style="text-align:center">MarkdownPad</td>
+<td style="text-align:center">Atom</td>
+<td style="text-align:center"><strong>Typora</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">Miu</td>
+<td style="text-align:center">Byword</td>
+<td style="text-align:center">ReText</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Typora</strong></td>
+<td style="text-align:center">Mou</td>
+<td style="text-align:center"><strong>Sublime Text 3</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">RStudio</td>
+<td style="text-align:center"><strong>Typora</strong></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Sublime Text 3</strong></td>
+<td style="text-align:center"><strong>Sublime Text 3</strong></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>我用的时<a href="https://typora.io/"><strong>Typora</strong></a>这款<strong>Markdown</strong>编辑器，功能非常强大，简洁好用，有着便利的<strong>Markdown</strong>快捷浏览和输入，就比如你在打<strong>粗体</strong>时：** 文字 ** 当你继续创作的时候，你会发现你可以直接看到浏览时的样子，并不是原来的源代码。</li>
+<li><em><strong>Typora</strong></em> 的一切都围绕纯粹的生产效率，而如果我们回头想想，高效、简单其实也是当初<strong>Markdown</strong>语言诞生的初衷。</li>
+</ul>
+<h2 id="常用的语法">常用的语法</h2>
+<p>最常见的<strong>Markdown</strong>格式选项和键盘快捷键（为了让大家直观的看见，我在Markdown部分加了空格，下面会详细地讲解）:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:left">输出后的效果</th>
+<th style="text-align:left">Markdown</th>
+<th style="text-align:left">快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗体</td>
+<td style="text-align:left"><strong>Bold</strong></td>
+<td style="text-align:left">** text **</td>
+<td style="text-align:left">Ctrl + B</td>
+</tr>
+<tr>
+<td>斜体</td>
+<td style="text-align:left"><em>Emphasize</em></td>
+<td style="text-align:left">* text *</td>
+<td style="text-align:left">Ctrl + I</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td style="text-align:left"><s>test</s></td>
+<td style="text-align:left">~~ test ~~</td>
+<td style="text-align:left">Ctrl + Alt + U</td>
+</tr>
+<tr>
+<td>超链接</td>
+<td style="text-align:left"><a href="fudongchen.github.io">东摘</a></td>
+<td style="text-align:left">[东摘] (fudongchen.github.io)</td>
+<td style="text-align:left">Ctrl + K</td>
+</tr>
+<tr>
+<td>代码块</td>
+<td style="text-align:left">Inline Code</td>
+<td style="text-align:left"><code>code</code></td>
+<td style="text-align:left">Ctrl + Shift + K</td>
+</tr>
+<tr>
+<td>图片</td>
+<td style="text-align:left">Image</td>
+<td style="text-align:left"><img src="http://" alt="alt" loading="lazy"></td>
+<td style="text-align:left">Ctrl + Shift + I</td>
+</tr>
+<tr>
+<td>引用</td>
+<td style="text-align:left">&gt;quote</td>
+<td style="text-align:left">&gt; quote</td>
+<td style="text-align:left">Ctrl + Q</td>
+</tr>
+<tr>
+<td>一级标题</td>
+<td style="text-align:left">H1</td>
+<td style="text-align:left"># Heading</td>
+<td style="text-align:left">无</td>
+</tr>
+<tr>
+<td>二级标题</td>
+<td style="text-align:left">H2</td>
+<td style="text-align:left">## Heading</td>
+<td style="text-align:left">Ctrl + H</td>
+</tr>
+<tr>
+<td>三级标题</td>
+<td style="text-align:left">H3</td>
+<td style="text-align:left">### Heading</td>
+<td style="text-align:left">Ctrl + H (x2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="标题">标题</h3>
+<ul>
+<li>标题能够让读者和自己直观感受到文章的结构和内容的分段<br>
+我将一级标题（字体<strong>最大</strong>）到六级标题（字体<strong>最小</strong>）定义h1~h6，因为标题的英文是<strong>Header</strong>（最高到h6）</li>
+</ul>
+<p>我们使用 &quot;#&quot;来表示标题前面的前缀</p>
+<ul>
+<li>
+<p>h1 :<strong>#</strong> 一级标题</p>
+</li>
+<li>
+<p>h2 :<strong>##</strong> 二级标题</p>
+</li>
+<li>
+<p>h3 :<strong>###</strong> 三级标题</p>
+</li>
+<li>
+<p>h4 :<strong>####</strong> 四级标题</p>
+</li>
+<li>
+<p>h5 :<strong>#####</strong> 五级标题</p>
+</li>
+<li>
+<p>h6 :<strong>######</strong> 六级标题</p>
+<p>重视标题，标题代表了文章的最初的**“精神面貌”**，标题的作用超乎你的想象。</p>
+</li>
+</ul>
+<h3 id="字体">字体</h3>
+<ul>
+<li>
+<p><strong>加粗</strong></p>
+<p>格式：** 文字 **（文字与星号之间没有空格，只是为了方便大家学习方法）</p>
+</li>
+<li>
+<p><em>斜体</em></p>
+<p>格式：* 文字 * （文字与星号之间没有空格。注意哦，是一个星号与一个星号之间）</p>
+</li>
+<li>
+<p><em><strong>加粗+斜体</strong></em></p>
+<p>格式：* * * 文字 * * *（文字与星号之间没有空格，星号与星号之间也没有，只是为了方便学习）</p>
+</li>
+</ul>
+<h3 id="引用">引用</h3>
+<p>使用 &quot;&gt;&quot;在所引用的文字的前面（不需要空格，自动就会出现引用的格式）</p>
+<blockquote>
+<p>我思故我在</p>
+</blockquote>
+<h3 id="删除线">删除线</h3>
+<p>格式：~~ 文字 ~~ （无空格，两个波浪线与两个波浪线之间的文字就会自动出现删除线 <s>文字</s>）</p>
+<h3 id="图片">图片</h3>
+<p>在<strong>Markdown</strong>里面，图片插入繁琐是他唯一的 <strong>缺点</strong></p>
+<p>使用<strong>Markdown</strong>将图像插入文章，你需要在<strong>Markdown</strong>编辑器输入 <img src="" alt="" loading="lazy"></p>
+<p>这时在预览面板中会自动创建一个图像上传框。你可以从电脑桌面拖放图片到上传框, 或者点击图片上传框使用标准的图像上传方式。</p>
+<p>如果你想通过链接插入网络上已经存在的图片，只要单击图片上传框的左下角的“链接”图标，这时就会呈现图像URL的输入框。想给图片添加一个标题, 你需要做的是将标题文本插图中的方括号，<img src="" alt="这里填写的是，如果图片打不开会出现的文字" loading="lazy"></p>
+<ul>
+<li>有一个弊端！如果你是写博客的话，插入的图片必须是网址图片链接</li>
+<li>如果大家对图片插入还有不理解的话，文章末尾我会给大家一些视频链接大家可以去看看</li>
+</ul>
+<h3 id="表格">表格</h3>
+<p>如果你使用的是<strong>Typora</strong>这个高效的<strong>Markdown</strong>编辑器，那么你添加表格就十分方便了</p>
+<p>|文字|文字|文字|然后再Enter确认就会出现一个表格，然后再右上角和左上角都有十分方便的快捷编辑表格工具，不需要多打什么代码</p>
+<table>
+<thead>
+<tr>
+<th>文字</th>
+<th>文字</th>
+<th>文字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="列表">列表</h3>
+<h4 id="有序列表">有序列表</h4>
+<p>当你需要排列话语时，有逻辑顺序，需要数字来标注时，我们可以用到有序列表。</p>
+<p>这一个并不需要什么代码，只需要在<strong>数字+英文句号</strong>的后面打<strong>一个空格</strong>，输完那个内容后，换行时，就会自动接下去。</p>
+<p>eg：</p>
+<ol>
+<li>（空格了，输入完后，换行<strong>Enter</strong>）</li>
+<li>（就会自动接上）</li>
+<li></li>
+<li></li>
+</ol>
+<h4 id="无序列表">无序列表</h4>
+<p>相比有序列表，无序列表可能没那么便捷，但是好用，能使结构更清楚。</p>
+<p>+或者-然后再空格一下就会出现一个实心原点，按<strong>Tap</strong>键，就会切换到下一级，再按就会再切换（最多三级）</p>
+<ul>
+<li>
+<p>第一级</p>
+<ul>
+<li>按<strong>Tap</strong>后，第二级
+<ul>
+<li>按<strong>Tap</strong>后，第三级
+<ul>
+<li>再按<strong>Tap</strong>只能往前移动格子</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可能文字上的表述不够生动，最后会给大家视频链接的</p>
+<p>列表过后，需要继续正文的话，在末尾，连续两下<strong>Ehter</strong></p>
+</li>
+</ul>
+<h3 id="分段线">分段线</h3>
+<p>分段线就是让读者直观看到段落分明的工具，在空白段落中，打出 <code>---</code>，就会发现有一天美丽又优雅的分段线。</p>
+<h3 id="代码块">代码块</h3>
+<p>相信很多程序员或者正在学习编程的朋友，在用<strong>Markdown</strong>的时候，想插入自己的代码怎么办，用代码块</p>
+<p>在下列的两个符号之间，都会打上代码块，当然啦，不好演示（无奈）</p>
+<p><code>print('Hello World!')</code></p>
+<h2 id="总结">总结</h2>
+<blockquote>
+<p>维基百科上说：<strong>Markdown是一种轻量级标记语言，易读易写</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>对于使用者来说，好的编辑器，才能更好的创作，最后我推荐<a href="https://typora.io/"><strong>Typora</strong></a>进行写作</p>
+</li>
+<li>
+<p>如果你还不太懂<strong>Markdown</strong>的语法的话，你可以观看更加生动的视频 <a href="https://www.bilibili.com/video/av13289789?from=search&amp;seid=7530017237125302291">三分半课堂</a>和<a href="https://www.bilibili.com/video/av63323906?t=535">Markdown入门</a></p>
+<p>好的，到了最后我们这篇教程就到这里结束了，<a href="https://typora.io/"><strong>Typora</strong></a>还有很多便利的功能，比如：支持右键谷歌搜索（推荐大家使用谷歌来搜索）、打字机模式和专注模式等等好用的功能，大家一起下载体验吧！</p>
+</li>
+</ul>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Felix
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://fudongchen.github.io/post/markdown" title="Markdown语法的学习教程">Markdown语法的学习教程</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://fudongchen.github.io/tag/03TMGoe48"># 信息时代</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+    </div>
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+    </div>
+    <div class="poweredby">
+      陈福东
+    </div>
+  </footer>
+  
+  
+    <div class="drawer-box left" id="drawer_box">
+      <span class="muse-line muse-line-first"></span>
+      <span class="muse-line muse-line-middle"></span>
+      <span class="muse-line muse-line-last"></span>
+    </div>
+  
+  <div class="muse back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+  </div>
+  
+  
+    <link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left:5px;bottom:0px;" data-key="">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+      <div class="live_talk_input_name_body">
+        <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+      </div>
+      <div class="live_talk_input_text_body">
+        <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+        <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+      </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+      <div class="live_ico_item type_info" id="showInfoBtn"></div>
+      <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+      
+      <div class="live_ico_item type_youdu" id="youduButton"></div>
+      <div class="live_ico_item type_quit" id="hideButton"></div>
+      <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+      <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+      <input id="duType" value="douqilai" type="hidden">
+      
+    </div>
+  </div>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/media/live2d/histoire/';
+let landlord = document.querySelector('#landlord');
+var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>

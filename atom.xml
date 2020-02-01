@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fudongchen.github.io</id>
     <title>Felix</title>
-    <updated>2020-02-01T15:24:03.897Z</updated>
+    <updated>2020-02-01T15:28:44.669Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fudongchen.github.io"/>
     <link rel="self" href="https://fudongchen.github.io/atom.xml"/>
@@ -10,4 +10,283 @@
     <logo>https://fudongchen.github.io/images/avatar.png</logo>
     <icon>https://fudongchen.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Felix</rights>
+    <entry>
+        <title type="html"><![CDATA[Markdown语法的学习教程]]></title>
+        <id>https://fudongchen.github.io/post/markdown</id>
+        <link href="https://fudongchen.github.io/post/markdown">
+        </link>
+        <updated>2020-01-24T04:15:16.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Markdown语法的学习教程</p>
+</blockquote>
+<h2 id="初识markdown">初识markdown</h2>
+<p><strong>Markdown</strong>是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p><strong>Markdown</strong>的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。包括我，写博客也是用<strong>Markdown</strong>，世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好支持<strong>Markdown</strong>。完全采用<strong>Markdown</strong>器的博客平台有<strong>Ghost</strong>和<strong>Typecho</strong>。</p>
+<h2 id="markdown编辑器的选择">Markdown编辑器的选择</h2>
+<p><strong>Markdown</strong>的编辑器至关重要，它决定了您使用<strong>Markdown</strong>写作时的效率，不同操作系统系统，编辑器的选择也不同。</p>
+<p>以下是比较常见的Markdown编辑器</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">windows</th>
+<th style="text-align:center">O S X</th>
+<th style="text-align:center">Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>VSCode</strong></td>
+<td style="text-align:center"><strong>VSCode</strong></td>
+<td style="text-align:center"><strong>VSCode</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">HBuilderX</td>
+<td style="text-align:center">MacDown</td>
+<td style="text-align:center">UberWriter</td>
+</tr>
+<tr>
+<td style="text-align:center">Atom</td>
+<td style="text-align:center">RStudio</td>
+<td style="text-align:center">Atom</td>
+</tr>
+<tr>
+<td style="text-align:center">CuteMarkEd</td>
+<td style="text-align:center">HBuilderX</td>
+<td style="text-align:center">RStudio</td>
+</tr>
+<tr>
+<td style="text-align:center">MarkdownPad</td>
+<td style="text-align:center">Atom</td>
+<td style="text-align:center"><strong>Typora</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">Miu</td>
+<td style="text-align:center">Byword</td>
+<td style="text-align:center">ReText</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Typora</strong></td>
+<td style="text-align:center">Mou</td>
+<td style="text-align:center"><strong>Sublime Text 3</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">RStudio</td>
+<td style="text-align:center"><strong>Typora</strong></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Sublime Text 3</strong></td>
+<td style="text-align:center"><strong>Sublime Text 3</strong></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>我用的时<a href="https://typora.io/"><strong>Typora</strong></a>这款<strong>Markdown</strong>编辑器，功能非常强大，简洁好用，有着便利的<strong>Markdown</strong>快捷浏览和输入，就比如你在打<strong>粗体</strong>时：** 文字 ** 当你继续创作的时候，你会发现你可以直接看到浏览时的样子，并不是原来的源代码。</li>
+<li><em><strong>Typora</strong></em> 的一切都围绕纯粹的生产效率，而如果我们回头想想，高效、简单其实也是当初<strong>Markdown</strong>语言诞生的初衷。</li>
+</ul>
+<h2 id="常用的语法">常用的语法</h2>
+<p>最常见的<strong>Markdown</strong>格式选项和键盘快捷键（为了让大家直观的看见，我在Markdown部分加了空格，下面会详细地讲解）:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:left">输出后的效果</th>
+<th style="text-align:left">Markdown</th>
+<th style="text-align:left">快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗体</td>
+<td style="text-align:left"><strong>Bold</strong></td>
+<td style="text-align:left">** text **</td>
+<td style="text-align:left">Ctrl + B</td>
+</tr>
+<tr>
+<td>斜体</td>
+<td style="text-align:left"><em>Emphasize</em></td>
+<td style="text-align:left">* text *</td>
+<td style="text-align:left">Ctrl + I</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td style="text-align:left"><s>test</s></td>
+<td style="text-align:left">~~ test ~~</td>
+<td style="text-align:left">Ctrl + Alt + U</td>
+</tr>
+<tr>
+<td>超链接</td>
+<td style="text-align:left"><a href="fudongchen.github.io">东摘</a></td>
+<td style="text-align:left">[东摘] (fudongchen.github.io)</td>
+<td style="text-align:left">Ctrl + K</td>
+</tr>
+<tr>
+<td>代码块</td>
+<td style="text-align:left">Inline Code</td>
+<td style="text-align:left"><code>code</code></td>
+<td style="text-align:left">Ctrl + Shift + K</td>
+</tr>
+<tr>
+<td>图片</td>
+<td style="text-align:left">Image</td>
+<td style="text-align:left"><img src="http://" alt="alt" loading="lazy"></td>
+<td style="text-align:left">Ctrl + Shift + I</td>
+</tr>
+<tr>
+<td>引用</td>
+<td style="text-align:left">&gt;quote</td>
+<td style="text-align:left">&gt; quote</td>
+<td style="text-align:left">Ctrl + Q</td>
+</tr>
+<tr>
+<td>一级标题</td>
+<td style="text-align:left">H1</td>
+<td style="text-align:left"># Heading</td>
+<td style="text-align:left">无</td>
+</tr>
+<tr>
+<td>二级标题</td>
+<td style="text-align:left">H2</td>
+<td style="text-align:left">## Heading</td>
+<td style="text-align:left">Ctrl + H</td>
+</tr>
+<tr>
+<td>三级标题</td>
+<td style="text-align:left">H3</td>
+<td style="text-align:left">### Heading</td>
+<td style="text-align:left">Ctrl + H (x2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="标题">标题</h3>
+<ul>
+<li>标题能够让读者和自己直观感受到文章的结构和内容的分段<br>
+我将一级标题（字体<strong>最大</strong>）到六级标题（字体<strong>最小</strong>）定义h1~h6，因为标题的英文是<strong>Header</strong>（最高到h6）</li>
+</ul>
+<p>我们使用 &quot;#&quot;来表示标题前面的前缀</p>
+<ul>
+<li>
+<p>h1 :<strong>#</strong> 一级标题</p>
+</li>
+<li>
+<p>h2 :<strong>##</strong> 二级标题</p>
+</li>
+<li>
+<p>h3 :<strong>###</strong> 三级标题</p>
+</li>
+<li>
+<p>h4 :<strong>####</strong> 四级标题</p>
+</li>
+<li>
+<p>h5 :<strong>#####</strong> 五级标题</p>
+</li>
+<li>
+<p>h6 :<strong>######</strong> 六级标题</p>
+<p>重视标题，标题代表了文章的最初的**“精神面貌”**，标题的作用超乎你的想象。</p>
+</li>
+</ul>
+<h3 id="字体">字体</h3>
+<ul>
+<li>
+<p><strong>加粗</strong></p>
+<p>格式：** 文字 **（文字与星号之间没有空格，只是为了方便大家学习方法）</p>
+</li>
+<li>
+<p><em>斜体</em></p>
+<p>格式：* 文字 * （文字与星号之间没有空格。注意哦，是一个星号与一个星号之间）</p>
+</li>
+<li>
+<p><em><strong>加粗+斜体</strong></em></p>
+<p>格式：* * * 文字 * * *（文字与星号之间没有空格，星号与星号之间也没有，只是为了方便学习）</p>
+</li>
+</ul>
+<h3 id="引用">引用</h3>
+<p>使用 &quot;&gt;&quot;在所引用的文字的前面（不需要空格，自动就会出现引用的格式）</p>
+<blockquote>
+<p>我思故我在</p>
+</blockquote>
+<h3 id="删除线">删除线</h3>
+<p>格式：~~ 文字 ~~ （无空格，两个波浪线与两个波浪线之间的文字就会自动出现删除线 <s>文字</s>）</p>
+<h3 id="图片">图片</h3>
+<p>在<strong>Markdown</strong>里面，图片插入繁琐是他唯一的 <strong>缺点</strong></p>
+<p>使用<strong>Markdown</strong>将图像插入文章，你需要在<strong>Markdown</strong>编辑器输入 <img src="" alt="" loading="lazy"></p>
+<p>这时在预览面板中会自动创建一个图像上传框。你可以从电脑桌面拖放图片到上传框, 或者点击图片上传框使用标准的图像上传方式。</p>
+<p>如果你想通过链接插入网络上已经存在的图片，只要单击图片上传框的左下角的“链接”图标，这时就会呈现图像URL的输入框。想给图片添加一个标题, 你需要做的是将标题文本插图中的方括号，<img src="" alt="这里填写的是，如果图片打不开会出现的文字" loading="lazy"></p>
+<ul>
+<li>有一个弊端！如果你是写博客的话，插入的图片必须是网址图片链接</li>
+<li>如果大家对图片插入还有不理解的话，文章末尾我会给大家一些视频链接大家可以去看看</li>
+</ul>
+<h3 id="表格">表格</h3>
+<p>如果你使用的是<strong>Typora</strong>这个高效的<strong>Markdown</strong>编辑器，那么你添加表格就十分方便了</p>
+<p>|文字|文字|文字|然后再Enter确认就会出现一个表格，然后再右上角和左上角都有十分方便的快捷编辑表格工具，不需要多打什么代码</p>
+<table>
+<thead>
+<tr>
+<th>文字</th>
+<th>文字</th>
+<th>文字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="列表">列表</h3>
+<h4 id="有序列表">有序列表</h4>
+<p>当你需要排列话语时，有逻辑顺序，需要数字来标注时，我们可以用到有序列表。</p>
+<p>这一个并不需要什么代码，只需要在<strong>数字+英文句号</strong>的后面打<strong>一个空格</strong>，输完那个内容后，换行时，就会自动接下去。</p>
+<p>eg：</p>
+<ol>
+<li>（空格了，输入完后，换行<strong>Enter</strong>）</li>
+<li>（就会自动接上）</li>
+<li></li>
+<li></li>
+</ol>
+<h4 id="无序列表">无序列表</h4>
+<p>相比有序列表，无序列表可能没那么便捷，但是好用，能使结构更清楚。</p>
+<p>+或者-然后再空格一下就会出现一个实心原点，按<strong>Tap</strong>键，就会切换到下一级，再按就会再切换（最多三级）</p>
+<ul>
+<li>
+<p>第一级</p>
+<ul>
+<li>按<strong>Tap</strong>后，第二级
+<ul>
+<li>按<strong>Tap</strong>后，第三级
+<ul>
+<li>再按<strong>Tap</strong>只能往前移动格子</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>可能文字上的表述不够生动，最后会给大家视频链接的</p>
+<p>列表过后，需要继续正文的话，在末尾，连续两下<strong>Ehter</strong></p>
+</li>
+</ul>
+<h3 id="分段线">分段线</h3>
+<p>分段线就是让读者直观看到段落分明的工具，在空白段落中，打出 <code>---</code>，就会发现有一天美丽又优雅的分段线。</p>
+<h3 id="代码块">代码块</h3>
+<p>相信很多程序员或者正在学习编程的朋友，在用<strong>Markdown</strong>的时候，想插入自己的代码怎么办，用代码块</p>
+<p>在下列的两个符号之间，都会打上代码块，当然啦，不好演示（无奈）</p>
+<p><code>print('Hello World!')</code></p>
+<h2 id="总结">总结</h2>
+<blockquote>
+<p>维基百科上说：<strong>Markdown是一种轻量级标记语言，易读易写</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>对于使用者来说，好的编辑器，才能更好的创作，最后我推荐<a href="https://typora.io/"><strong>Typora</strong></a>进行写作</p>
+</li>
+<li>
+<p>如果你还不太懂<strong>Markdown</strong>的语法的话，你可以观看更加生动的视频 <a href="https://www.bilibili.com/video/av13289789?from=search&amp;seid=7530017237125302291">三分半课堂</a>和<a href="https://www.bilibili.com/video/av63323906?t=535">Markdown入门</a></p>
+<p>好的，到了最后我们这篇教程就到这里结束了，<a href="https://typora.io/"><strong>Typora</strong></a>还有很多便利的功能，比如：支持右键谷歌搜索（推荐大家使用谷歌来搜索）、打字机模式和专注模式等等好用的功能，大家一起下载体验吧！</p>
+</li>
+</ul>
+]]></content>
+    </entry>
 </feed>
